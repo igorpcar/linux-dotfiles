@@ -1,0 +1,86 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+  font-size: 16px;
+}
+
+window#waybar {
+  background-color: rgba(43, 48, 59, 0);
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.modules-left {
+  margin: 9px;
+  padding-left: 2px;
+  border-radius: 0.5rem;
+}
+
+.modules-right,
+.modules-center {
+  margin: 9px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+
+#workspaces {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  padding: 0 10px;
+}
+
+#workspaces button {
+  background-color: transparent;
+  border: 0;
+}
+
+#workspaces button:hover {
+  background: inherit;
+  border: 0;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+.modules-right .module {
+  padding: 0 10px;
+}
+
+#pulseaudio {
+  color: #89b4fa;
+}
+
+#backlight {
+  color: #74c7ec;
+}
+
+#network {
+  color: #94e2d5;
+}
+
+#power-profiles-daemon {
+  color: #a6e3a1;
+}
+
+#cpu {
+  color: #f9e2af;
+}
+
+#memory {
+  color: #fab387;
+}
+
+#custom-power {
+  color: #f38ba8;
+}
+
+#custom-youtube,
+#custom-whatsapp,
+#custom-chatgpt {
+  padding-left: 10px;
+  padding-right: 15px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,25 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias nvimfzf='nvim $(fzf --preview="cat {}")'
+alias ls='ls -l --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+bind 'set bell-style none'
+
+function znvim() {
+  local dir
+  dir="$(zoxide query "$1")" || return 1
+  local file
+  file="$(fd . "$dir" --absolute-path | fzf)" || return 1
+  nvim "$file"
+}
+
+export prj="$HOME/Documentos/projetos"
+
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"

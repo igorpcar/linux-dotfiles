@@ -1,0 +1,4 @@
+map j feedkeys "<C-Down>"
+map k feedkeys "<C-Up>"
+#map <C-d> feedkeys "10<C-Down>"
+
