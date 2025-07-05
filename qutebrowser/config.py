@@ -26,7 +26,7 @@ config.bind('ps', 'spawn --userscript bitwarden', mode='normal')
 c.zoom.default = "115%"
 c.tabs.show = 'always'
 c.url.start_pages = ['google.com']
-
+c.fonts.default_size = '11pt'
 # c.fonts.completion.entry = "11pt Noto Sans"
 # c.fonts.completion.category = "bold 11pt Noto Sans"
 # c.fonts.debug_console = "11pt Noto Sans"
