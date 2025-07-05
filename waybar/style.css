@@ -1,13 +1,16 @@
+@import "mocha.css";
+
 * {
   font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
   font-size: 16px;
+  color: @text;
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0);
-  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
   transition-property: background-color;
   transition-duration: 0.5s;
+  background-color: alpha(@base, 0.15);
 }
 
 .modules-left {
@@ -22,6 +25,8 @@ window#waybar {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   padding: 0px 10px;
+  background-color: shade(@base, 0.9);
+  border: 2px solid alpha(@crust, 0.3);
 }
 
 #workspaces {
@@ -41,7 +46,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: @red;
 }
 
 .modules-right .module {
@@ -49,31 +54,32 @@ window#waybar {
 }
 
 #pulseaudio {
-  color: #89b4fa;
+  /* color: #89b4fa; */
+  color: @blue;
 }
 
 #backlight {
-  color: #74c7ec;
+  color: @sapphire;
 }
 
 #network {
-  color: #94e2d5;
+  color: @teal;
 }
 
 #power-profiles-daemon {
-  color: #a6e3a1;
+  color: @green;
 }
 
 #cpu {
-  color: #f9e2af;
+  color: @yellow;
 }
 
 #memory {
-  color: #fab387;
+  color: @peach;
 }
 
 #custom-power {
-  color: #f38ba8;
+  color: @maroon;
 }
 
 #custom-youtube,
