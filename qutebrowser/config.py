@@ -38,8 +38,8 @@ c.fonts.default_size = '11pt'
 # c.fonts.messages.warning = "11pt Noto Sans"
 # c.fonts.prompts = "11pt Noto Sans"
 # c.fonts.statusbar = "11pt Noto Sans"
-# c.fonts.tabs.selected = "11pt Noto Sans"
-# c.fonts.tabs.unselected = "11pt Noto Sans"
+c.fonts.tabs.selected = "11pt JetBrainsMono"
+c.fonts.tabs.unselected = "11pt JetBrainsMono"
 
 config.bind('gh', 'tab-move -')
 config.bind('gl', 'tab-move +')
@@ -63,7 +63,7 @@ config.bind('d', 'scroll-page 0 0.5', mode='normal')
 config.bind('u', 'scroll-page 0 -0.5', mode='normal')
 
 # Estilos da aba
-c.tabs.padding = {'top': 8, 'bottom': 8, 'left': 5, 'right': 5} # Aumenta o preenchimento para mais espaço
+c.tabs.padding = {'top': 8, 'bottom': 8, 'left': 8, 'right': 5} # Aumenta o preenchimento para mais espaço
 c.tabs.indicator.width = 0 # Largura do indicador de carregamento
 c.tabs.favicons.scale = 1.0 # Tamanho dos favicons
 
