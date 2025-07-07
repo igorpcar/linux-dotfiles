@@ -15,7 +15,7 @@ window#waybar {
 
 .modules-left {
   margin: 9px;
-  padding-left: 2px;
+  padding-left: 6px;
   border-radius: 0.5rem;
 }
 
@@ -29,8 +29,12 @@ window#waybar {
   border: 2px solid alpha(@crust, 0.3);
 }
 
+.modules-right {
+  margin-right: 18px;
+}
+
 #workspaces {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: shade(@base, 0.9);
   border-radius: 0.5rem;
   padding: 0 10px;
 }
@@ -82,11 +86,3 @@ window#waybar {
   color: @maroon;
 }
 
-#custom-youtube,
-#custom-whatsapp,
-#custom-chatgpt {
-  padding-left: 10px;
-  padding-right: 15px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
