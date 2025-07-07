@@ -64,14 +64,18 @@ config.bind('u', 'scroll-page 0 -0.5', mode='normal')
 
 # Estilos da aba
 c.tabs.padding = {'top': 8, 'bottom': 8, 'left': 5, 'right': 5} # Aumenta o preenchimento para mais espaço
-c.tabs.indicator.width = 1 # Largura do indicador de carregamento
+c.tabs.indicator.width = 0 # Largura do indicador de carregamento
 c.tabs.favicons.scale = 1.0 # Tamanho dos favicons
+
+# tema catppuccin nao configura isso por padrão
+c.colors.tabs.pinned.even.bg = "#5b6078"
+c.colors.tabs.pinned.odd.bg = "#494d64"
 
 # Formato do título da aba - REMOVEMOS '{title_sep}{title}'
 # Agora só mostra o áudio (se houver), o índice e o host.
-c.tabs.title.format = '{audio}{index}: {host}'
-c.tabs.title.format_pinned = '{index}: {host}' # Formato do título da aba fixada
-c.tabs.max_width = 250 # Largura máxima da aba para evitar que fiquem muito grandes
+c.tabs.title.format = '{audio}{index}. {host}'
+c.tabs.title.format_pinned = '' # Formato do título da aba fixada
+c.tabs.max_width = 200 # Largura máxima da aba para evitar que fiquem muito grandes
 
 c.url.searchengines = {
     'DEFAULT':  'https://google.com/search?hl=en&q={}',
