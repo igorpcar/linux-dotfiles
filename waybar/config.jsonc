@@ -7,9 +7,6 @@
 
   "modules-left": [
     "hyprland/workspaces",
-    "custom/youtube",
-    "custom/whatsapp",
-    "custom/chatgpt"
   ],
   "modules-center": ["clock","custom/weather"],
   "modules-right": [
@@ -19,25 +16,9 @@
     "power-profiles-daemon",
     "cpu",
     "memory",
-    //"clock",
     "tray",
     "custom/power"
   ],
-
-  "custom/youtube": {
-    "format": "",
-    "on-click": "chromium youtube.com"
-  },
-
-  "custom/whatsapp": {
-    "format": "",
-    "on-click": "chromium web.whatsapp.com"
-  },
-
-  "custom/chatgpt": {
-    "format": "",
-    "on-click": "chromium chatgpt.com"
-  },
 
   "custom/weather": {
       "exec": "~/.config/waybar/scripts/weather_extract.sh",
