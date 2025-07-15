@@ -1,8 +1,16 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
+require("lua.autocmds")
+require("lua.keymaps")
+require("lua.options")
+
+-- Create undo directory if it doesn't exist
+local undodir = vim.fn.expand("~/.config/nvim/undodir")
+if vim.fn.isdirectory(undodir) == 0 then
+  vim.fn.mkdir(undodir, "p")
+end
+
 require("config.lazy")
 
--- Movimento com Ctrl + hjkl no modo insert
-vim.keymap.set("i", "<C-h>", "<Left>")
-vim.keymap.set("i", "<C-j>", "<Down>")
-vim.keymap.set("i", "<C-k>", "<Up>")
-vim.keymap.set("i", "<C-l>", "<Right>")
+-- Window transparency
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
