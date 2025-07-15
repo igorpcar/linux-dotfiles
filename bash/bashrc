@@ -23,3 +23,30 @@ export prj="$HOME/Documentos/projetos"
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+
+# Função para encontrar e lançar uma sessão do Kitty com fzf
+ksession() {
+  local sessions_dir="$HOME/.config/kitty/sessions"
+  local selected_filename
+
+  # A linha do fzf foi modificada:
+  # 1. A opção '--preview' foi removida.
+  # 2. As opções '--layout=reverse', '--height=40%' e '--width=50%' foram adicionadas
+  #    para controlar o tamanho e a posição da janela do fzf.
+  selected_filename=$(find "$sessions_dir" -type f -name "*.conf" -printf "%f\n" | \
+    fzf --height=40% --layout=reverse)
+
+  # Verifica se o usuário realmente selecionou um arquivo
+  if [[ -n "$selected_filename" ]]; then
+    # Reconstrói o caminho completo do arquivo para ser usado pelo Kitty
+    local full_path="$sessions_dir/$selected_filename"
+    
+    # O resto do script permanece o mesmo
+    (kitty --session "$full_path" &) && disown
+    sleep 0.5
+    kitty @ close-window --self
+  else
+    echo "Nenhuma sessão selecionada."
+    return 1
+  fi
+}
