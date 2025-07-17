@@ -1,0 +1,9 @@
+@theme "catppuccin-default"
+
+configuration {
+	case-sensitive: false;
+	case-smart: true;
+}
+
+window {
+}
