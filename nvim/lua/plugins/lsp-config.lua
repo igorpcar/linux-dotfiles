@@ -9,14 +9,13 @@ return {
 		"mason-org/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "html", "cssls" },
+				ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "bashls" },
 			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-
 			-- Configurações de diagnóstico
 			vim.diagnostic.config({
 				virtual_text = true,
@@ -26,6 +25,21 @@ return {
 				severity_sort = true,
 			})
 
+      require("lspconfig").bashls.setup {}
+
+			local _border = "single"
+
+			vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+				border = _border,
+			})
+
+			vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+				border = _border,
+			})
+
+			vim.diagnostic.config({
+				float = { border = _border },
+			})
 
 			-- Keymaps
 			vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<cr>", { silent = true, desc = "lsp saga hover" })

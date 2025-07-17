@@ -1,6 +1,6 @@
-require("lua.autocmds")
-require("lua.keymaps")
-require("lua.options")
+require("autocmds")
+require("keymaps")
+require("options")
 
 -- Create undo directory if it doesn't exist
 local undodir = vim.fn.expand("~/.config/nvim/undodir")
@@ -11,6 +11,6 @@ end
 require("config.lazy")
 
 -- Window transparency
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })

@@ -2,8 +2,8 @@ return {
 	"catppuccin/nvim",
 	name = "catppuccin",
 	opts = {
-		flavour = "macchiato",
-		transparent_background = false,
+		flavour = "mocha",
+		transparent_background = true,
 		custom_highlights = function(colors)
 			return {
 				-- Mudar a cor dos números de linha normais

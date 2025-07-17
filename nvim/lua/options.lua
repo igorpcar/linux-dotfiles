@@ -1,3 +1,12 @@
+vim.opt.guicursor = table.concat({
+  "n-v-c-sm:block",     -- n: Normal, v: Visual, c: Command, sm: Showmatch -> Bloco
+  "i-ci-ve:ver25",      -- i: Insert, ci: Command Insert, ve: Visual-edit -> Barra Vertical com 25% de espessura
+  "r-cr-o:hor20",       -- r: Replace, cr: Command Replace, o: Operator-pending -> Barra Horizontal com 20% de altura
+}, ",")
+
+-- Desativa os keymaps padrão do bullets
+vim.g.bullets_set_mappings = false
+
 -- Opções gerais de folding
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
@@ -27,8 +36,10 @@ vim.opt.smartcase = true                           -- Case sensitive if uppercas
 vim.opt.incsearch = true                           -- Show matches as you type
 
 -- Visual settings
+
+vim.opt.fillchars:append({ eob = " " }) -- Hide tilde at end of buffer
 vim.opt.termguicolors = true                       -- Enable 24-bit colors
-vim.opt.signcolumn = "yes"                         -- Always show sign column
+vim.opt.signcolumn = "no"                          -- Hide signcolum at start
 vim.opt.showmatch = true                           -- Highlight matching brackets
 vim.opt.matchtime = 2                              -- How long to show matching bracket
 vim.opt.cmdheight = 0                              -- Command line height
@@ -59,7 +70,7 @@ vim.opt.errorbells = false                         -- No error bells
 vim.opt.backspace = "indent,eol,start"             -- Better backspace behavior
 vim.opt.autochdir = false                          -- Don't auto change directory
 vim.opt.path:append("**")                          -- include subdirectories in search
-vim.opt.selection = "exclusive"                    -- Selection behavior
+vim.opt.selection = "inclusive"                    -- Selection behavior
 vim.opt.mouse = "a"                                -- Enable mouse support
 vim.opt.clipboard:append("unnamedplus")            -- Use system clipboard
 vim.opt.modifiable = true                          -- Allow buffer modifications
