@@ -1,0 +1,16 @@
+@theme "catppuccin-default"
+
+configuration {
+	case-sensitive: false;
+	case-smart: true;
+}
+
+listview {
+	lines: 8;
+	columns: 1;
+}
+
+window {
+  width: 400px;
+}
+
