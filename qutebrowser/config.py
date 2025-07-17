@@ -19,9 +19,9 @@ config.bind('ps', 'spawn --userscript bitwarden', mode='normal')
 
 # dark mode setup
 # c.colors.webpage.darkmode.enabled = True
-# c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
-# c.colors.webpage.darkmode.policy.images = 'never'
-# config.set('colors.webpage.darkmode.enabled', False, 'file://*')
+c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+c.colors.webpage.darkmode.policy.images = 'never'
+config.set('colors.webpage.darkmode.enabled', False, 'file://*')
 
 c.zoom.default = "115%"
 c.tabs.show = 'always'
@@ -61,6 +61,8 @@ config.bind('gm4', 'tab-move 4')
 config.bind('gm5', 'tab-move 5')
 config.bind('d', 'scroll-page 0 0.5', mode='normal')
 config.bind('u', 'scroll-page 0 -0.5', mode='normal')
+config.bind('<Ctrl-k>', 'tab-prev')
+config.bind('<Ctrl-j>', 'tab-next')
 
 # Estilos da aba
 c.tabs.padding = {'top': 8, 'bottom': 8, 'left': 8, 'right': 5} # Aumenta o preenchimento para mais espaço
