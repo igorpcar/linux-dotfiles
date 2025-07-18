@@ -63,6 +63,8 @@ config.bind('d', 'scroll-page 0 0.5', mode='normal')
 config.bind('u', 'scroll-page 0 -0.5', mode='normal')
 config.bind('<Ctrl-k>', 'tab-prev')
 config.bind('<Ctrl-j>', 'tab-next')
+config.bind('td', 'set colors.webpage.darkmode.enabled true')
+config.bind('tl', 'set colors.webpage.darkmode.enabled false')
 
 # Estilos da aba
 c.tabs.padding = {'top': 8, 'bottom': 8, 'left': 8, 'right': 5} # Aumenta o preenchimento para mais espaço
