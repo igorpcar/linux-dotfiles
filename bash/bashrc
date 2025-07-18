@@ -29,10 +29,6 @@ ksession() {
   local sessions_dir="$HOME/.config/kitty/sessions"
   local selected_filename
 
-  # A linha do fzf foi modificada:
-  # 1. A opção '--preview' foi removida.
-  # 2. As opções '--layout=reverse', '--height=40%' e '--width=50%' foram adicionadas
-  #    para controlar o tamanho e a posição da janela do fzf.
   selected_filename=$(find "$sessions_dir" -type f -name "*.conf" -printf "%f\n" | \
     fzf --height=40% --layout=reverse)
 
